@@ -14,9 +14,6 @@
 ;;(set-frame-size (selected-frame) 145 42)
 
 ;; ANB changes
-(set-face-attribute 'default nil :height 150)
-(add-to-list 'default-frame-alist '(height . 42))
-(add-to-list 'default-frame-alist '(width . 110))
 (global-linum-mode 1)
 
 ;; installing packages
@@ -28,7 +25,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-ruby)
+(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-ruby rubocop)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
