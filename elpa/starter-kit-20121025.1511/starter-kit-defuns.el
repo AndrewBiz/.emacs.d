@@ -60,15 +60,6 @@
   (require 'saveplace)
   (setq save-place t))
 
-(defun esk-turn-on-whitespace ()
-  (whitespace-mode t))
-
-(defun esk-turn-on-paredit ()
-  (paredit-mode t))
-
-(defun esk-turn-on-idle-highlight-mode ()
-  (idle-highlight-mode t))
-
 (defun esk-pretty-lambdas ()
   (font-lock-add-keywords
    nil `(("(?\\(lambda\\>\\)"
@@ -78,7 +69,7 @@
 
 (defun esk-add-watchwords ()
   (font-lock-add-keywords
-   nil '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\|NOCOMMIT\\)"
+   nil '(("\\<\\(FIX\\(ME\\)?\\|TODO\\|HACK\\|REFACTOR\\|NOCOMMIT\\)"
           1 font-lock-warning-face t))))
 
 (add-hook 'prog-mode-hook 'esk-local-column-number-mode)
@@ -87,13 +78,13 @@
 (add-hook 'prog-mode-hook 'esk-turn-on-save-place-mode)
 (add-hook 'prog-mode-hook 'esk-pretty-lambdas)
 (add-hook 'prog-mode-hook 'esk-add-watchwords)
-(add-hook 'prog-mode-hook 'esk-turn-on-idle-highlight-mode)
+(add-hook 'prog-mode-hook 'idle-highlight-mode)
 
 (defun esk-prog-mode-hook ()
   (run-hooks 'prog-mode-hook))
 
 (defun esk-turn-off-tool-bar ()
-  (tool-bar-mode -1))
+  (if (functionp 'tool-bar-mode) (tool-bar-mode -1)))
 
 (defun esk-untabify-buffer ()
   (interactive)

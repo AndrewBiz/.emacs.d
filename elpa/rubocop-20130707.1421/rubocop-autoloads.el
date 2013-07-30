@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (rubocop-run-on-current-file rubocop-run-on-directory
-;;;;;;  rubocop-run-on-project) "rubocop" "rubocop.el" (20959 4248
+;;;;;;  rubocop-run-on-project) "rubocop" "rubocop.el" (20982 55735
 ;;;;;;  0 0))
 ;;; Generated autoloads from rubocop.el
 
@@ -26,7 +26,8 @@ Run on current file.
 
 ;;;***
 
-;;;### (autoloads nil nil ("rubocop-pkg.el") (20959 4248 566789 0))
+;;;### (autoloads nil nil ("rubocop-pkg.el") (20982 55735 403476
+;;;;;;  0))
 
 ;;;***
 

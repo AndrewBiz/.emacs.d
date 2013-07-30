@@ -1,10 +1,11 @@
 ;;; rubocop.el --- An Emacs interface for RuboCop
 
-;; Copyright © 2011-2013 Bozhidar Batsov
+;; Copyright Â© 2011-2013 Bozhidar Batsov
 
 ;; Author: Bozhidar Batsov
 ;; URL: https://github.com/bbatsov/rubocop-emacs
-;; Version: 0.1
+;; Version: 20130707.1421
+;; X-Original-Version: 0.2
 ;; Keywords: project, convenience
 ;; Package-Requires: ((dash "1.0.0"))
 
@@ -78,7 +79,7 @@ Alternatively prompt user for directory."
          (or directory
              (read-directory-name "Select directory:"))))
     (compilation-start
-     (concat "rubocop -es " directory)
+     (concat "rubocop --format emacs " directory)
      'compilation-mode
      (lambda (arg) (message arg) (rubocop-buffer-name directory)))))
 
@@ -90,7 +91,7 @@ Alternatively prompt user for directory."
   (let ((file-name (buffer-file-name (current-buffer))))
     (if file-name
         (compilation-start
-         (concat "rubocop -es " file-name)
+         (concat "rubocop --format emacs " file-name)
          'compilation-mode
          (lambda (arg) (rubocop-buffer-name file-name)))
       (error "Buffer is not visiting a file"))))
