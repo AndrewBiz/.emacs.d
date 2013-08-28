@@ -1,4 +1,7 @@
 ;; ANB changes
+(require 'rvm)
+(rvm-use-default) ;; use rvm's default ruby for the current Emacs session
+
 ;;(set-face-attribute 'default nil :font "PT Mono")
 ;;(set-face-attribute 'default nil :font "Anonymous Pro")
 

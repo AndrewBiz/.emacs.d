@@ -17,6 +17,3 @@
 ;; ANB changes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (global-linum-mode 1)
-
-(require 'rvm)
-(rvm-use-default) ;; use rvm's default ruby for the current Emacs session
