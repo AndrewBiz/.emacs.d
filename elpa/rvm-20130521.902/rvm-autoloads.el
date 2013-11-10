@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (rvm-open-gem rvm-use rvm-activate-corresponding-ruby
-;;;;;;  rvm-use-default) "rvm" "rvm.el" (20982 55729 0 0))
+;;;;;;  rvm-use-default) "rvm" "rvm.el" (21064 3145 0 0))
 ;;; Generated autoloads from rvm.el
 
 (autoload 'rvm-use-default "rvm" "\
@@ -31,7 +31,7 @@ switch the current ruby version to any ruby, which is installed with rvm
 
 ;;;***
 
-;;;### (autoloads nil nil ("rvm-pkg.el") (20982 55729 51564 0))
+;;;### (autoloads nil nil ("rvm-pkg.el") (21064 3145 344849 0))
 
 ;;;***
 
